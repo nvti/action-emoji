@@ -36,3 +36,5 @@ _config_git() {
 }
 
 printenv
+
+cat ${GITHUB_EVENT_PATH}
