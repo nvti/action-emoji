@@ -1,7 +1,7 @@
-FROM alpine:3.9.6
+FROM python:3.8-alpine
 
 RUN apk --update --no-cache add git bash
 
-COPY "entrypoint.sh" "/entrypoint.sh"
+COPY "emoji.py" "/emoji.py"
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["python", "emoji.py"]
