@@ -1,13 +1,10 @@
 import json
 import os
-import git
+from github import Github
 
 with open(os.environ["GITHUB_EVENT_PATH"]) as json_file:
     data = json.load(json_file)
     print(data)
 
-g = git.cmd.Git()
-g.pull()
-g.checkout(data['ref'])
-
-print(g.log(oneline=True))
+g = Github(os.environ["INPUT_GITHUB_TOKEN"])
+print(g)
