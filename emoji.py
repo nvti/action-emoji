@@ -8,6 +8,6 @@ with open(os.environ["GITHUB_EVENT_PATH"]) as json_file:
 
 g = git.cmd.Git()
 g.pull()
-g.checkout("origin", data['ref'])
+g.checkout(data['ref'])
 
-print(g.log())
+print(g.log(oneline=True))
