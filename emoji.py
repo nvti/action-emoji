@@ -18,4 +18,4 @@ repo = g.get_repo(data['repository']['full_name'])
 pull = repo.get_pull(data['pull_request']['number'])
 
 if not check_emoji(pull.title):
-    pull.edit(title=":jack_o_lantern: " + pull.title.trim())
+    pull.edit(title=":jack_o_lantern: " + pull.title.strip())
