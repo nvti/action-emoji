@@ -1,0 +1,13 @@
+name: "Emoji commit"
+description: "Add funny emoji to message of last commit"
+branding:
+  icon: "arrow-up"
+  color: "yellow"
+inputs:
+  GITHUB_TOKEN:
+    description: "In order for GitHub to trigger the rebuild of your page you must provide the action with the repositories provided GitHub token."
+    required: false
+
+runs:
+  using: docker
+  image: Dockerfile
