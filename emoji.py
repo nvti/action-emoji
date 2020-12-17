@@ -6,13 +6,11 @@ from github import Github
 
 def check_emoji(title):
     result = re.search("^:[a-z0-9_]+:", title)
-    print(result)
     return result != None
 
 
 with open(os.environ["GITHUB_EVENT_PATH"]) as json_file:
     data = json.load(json_file)
-    print(data)
 
 g = Github(os.environ["INPUT_GITHUB_TOKEN"])
 repo = g.get_repo(data['repository']['full_name'])
