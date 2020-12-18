@@ -12,18 +12,21 @@ def check_emoji(title):
 
 
 def load_config():
-    if os.path.isfile("./.github/emoji.yml"):
-        config_file = "./.github/emoji.yml"
-    elif os.path.isfile("./.github/emoji.yaml"):
-        config_file = "./.github/emoji.yaml"
-    else:
-        return {"all": True}
-
     config = {
         "all": False,
         "lists": [],
         "customs": []
     }
+
+    if os.path.isfile("./.github/emoji.yml"):
+        config_file = "./.github/emoji.yml"
+    elif os.path.isfile("./.github/emoji.yaml"):
+        config_file = "./.github/emoji.yaml"
+    else:
+        config["all"] = True
+        return config
+
+    print(f"Load user config from {config_file}")
 
     with open(config_file, 'r') as f:
         try:
@@ -35,7 +38,7 @@ def load_config():
         except yaml.YAMLError as exc:
             print(exc)
 
-        return config
+    return config
 
 
 def load_emoji():
