@@ -7,7 +7,7 @@ from github import Github
 
 
 def check_emoji(title):
-    result = re.search("^:[a-z0-9_]+:", title)
+    result = re.search("^:[a-z0-9_\+\-]+:", title)
     return result != None
 
 
