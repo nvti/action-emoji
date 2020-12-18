@@ -9,6 +9,10 @@ def check_emoji(title):
     return result != None
 
 
+def get_emoji(title):
+    return "jack_o_lantern"
+
+
 with open(os.environ["GITHUB_EVENT_PATH"]) as json_file:
     data = json.load(json_file)
 
@@ -18,4 +22,6 @@ repo = g.get_repo(data['repository']['full_name'])
 pull = repo.get_pull(data['pull_request']['number'])
 
 if not check_emoji(pull.title):
-    pull.edit(title=":jack_o_lantern: " + pull.title.strip())
+    emoji = get_emoji(pull.title)
+    print(f"Add emoji :{emoji}: to title")
+    pull.edit(title=f":{emoji}: {pull.title.strip()}")
