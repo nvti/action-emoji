@@ -1,0 +1,11 @@
+all: false
+lists:
+  - people
+  - nature
+  - objects
+  - places
+customs:
+  - atom
+  - suspect
+  - electron
+  - england
