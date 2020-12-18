@@ -16,7 +16,7 @@ def load_emoji():
     with open("/emoji.yaml", 'r') as f:
         try:
             data = yaml.safe_load(f)
-            for _, value in data:
+            for _, value in data.items():
                 emojis.extend(value)
 
             return emojis
