@@ -4,8 +4,8 @@ This is a fun github action, to add random emoji to every pull request title ðŸš
 
 ## Inputs
 
-| Name         | Required           | Description                                                                                                                      |
-| ------------ | ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| Name         |      Required      | Description                                                                                                                      |
+| ------------ | :----------------: | -------------------------------------------------------------------------------------------------------------------------------- |
 | GITHUB_TOKEN | :heavy_check_mark: | In order for GitHub to trigger the rebuild of your page you must provide the action with the repositories provided GitHub token. |
 
 ## Example
