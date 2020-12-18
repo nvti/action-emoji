@@ -6,4 +6,4 @@ RUN pip install PyGithub PyYAML
 COPY "emoji.py" "/emoji.py"
 COPY "emoji.yaml" "/emoji.yaml"
 
-ENTRYPOINT ["python", "emoji.py"]
+ENTRYPOINT ["python", "/emoji.py"]

@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Add emoji 🥰
-        uses: tiena2cva/action-emoji@v0.5
+        uses: tiena2cva/action-emoji@v0.6
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
