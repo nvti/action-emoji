@@ -1,6 +1,10 @@
 # Emoji action
 
-This is a fun github action, to add random emoji to every pull request title 🚀💖
+This is a fun github action, to add random emoji to every pull request title :rocket::heart:
+
+Your github repo will look very pretty :heart_eyes::bouquet::tomato:
+
+![Screenshot](screen.png)
 
 ## Inputs
 
