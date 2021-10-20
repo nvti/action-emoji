@@ -11,4 +11,4 @@ jobs:
       - name: Add emoji 🥰
         uses: ./
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SERVICE_ACCOUNT_KEY }}
