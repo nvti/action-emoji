@@ -1,6 +1,6 @@
 # Emoji action
 
-This is a fun github action, to add random emoji to every pull request title :rocket::heart:
+This is a fun github action, to add a random emoji to every pull request title :rocket::heart:
 
 Your github repo will look very pretty :heart_eyes::bouquet::tomato:
 
@@ -10,13 +10,13 @@ Your github repo will look very pretty :heart_eyes::bouquet::tomato:
 
 | Name         |      Required      | Description                                                                                                                      |
 | ------------ | :----------------: | -------------------------------------------------------------------------------------------------------------------------------- |
-| GITHUB_TOKEN | :heavy_check_mark: | In order for GitHub to trigger the rebuild of your page you must provide the action with the repositories provided GitHub token. |
+| GITHUB_TOKEN | :heavy_check_mark: | In order for GitHub to trigger the rebuild of your page, you must provide the action with the repositories provided GitHub token. |
 
 ## Example
 
 ### Action
 
-Easy to use **Emoji action** by add [github workflow file](https://docs.github.com/en/free-pro-team@latest/actions/quickstart)
+Easy to use **Emoji action** by adding [github workflow file](https://docs.github.com/en/free-pro-team@latest/actions/quickstart)
 
 ```yml
 name: Add Emoji
@@ -37,7 +37,7 @@ jobs:
 
 ### Configure
 
-You can use configure file to customize what emoji will be chosen
+You can use configure the following file to customize what emoji will be chosen
 
 Create `.github/emoji.yml` based on the following template.
 
@@ -47,15 +47,15 @@ Create `.github/emoji.yml` based on the following template.
 # Include all emoji supported or not
 all: false
 
-# Choose what list of emoji you want to use. Support 4 list: people, nature, objects, places.
-# If "all" is true, all of list will be included
+# Choose what list of emojis you want to use. Support 4 lists: people, nature, objects, places.
+# If "all" is true, all list will be included
 lists:
   - people
   - nature
   - objects
   - places
 
-# User custom emoji list
+# User customized emoji list
 customs:
   - atom
   - suspect
